@@ -135,7 +135,7 @@ resource "kubectl_manifest" "karpenter_node_pool_spot" {
           requirements:
             - key: "topology.kubernetes.io/zone"
               operator: In
-              values: ["eu-central-1a", "eu-central-1b", "eu-central-1c"]
+              values: ["${data.aws_region.current.name}a", "${data.aws_region.current.name}b", "${data.aws_region.current.name}c"]
             - key: "karpenter.k8s.aws/instance-category"
               operator: In
               values: ["c", "m", "r"]
@@ -165,7 +165,7 @@ resource "kubectl_manifest" "karpenter_node_pool_spot" {
         memory: 64Gi
       disruption:
         consolidationPolicy: WhenEmptyOrUnderutilized
-        consolidateAfter: 2m
+        consolidateAfter: 0m
         expireAfter: 24h
       weight: 20
   YAML

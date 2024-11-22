@@ -1,11 +1,13 @@
 # l3-infrastructure
 
+This repository contains the necessary Infrastructure-as-Code configuration to create a benchmark environment for L3.
+
 ## Setup
 
 - `aws`
 - `opentofu`
 - `go`
-- linkerd `2.11.4`
+- `linkerd` in version `2.11.4`
 
 ### Basic temporary steps
 

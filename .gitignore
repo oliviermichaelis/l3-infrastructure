@@ -1,4 +1,5 @@
 terraform.tfstate*
-.terraform
+**/.terraform
 
 .certificates
+.kube-context

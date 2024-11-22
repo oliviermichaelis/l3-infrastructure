@@ -1,11 +1,12 @@
 data "aws_availability_zones" "available" {}
+data "aws_region" "current" {}
 
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "20.26.0"
 
   cluster_name    = var.cluster_name
-  cluster_version = "1.31"
+  cluster_version = "1.24" # Required for Linkerd v1.11 because of Cronjob v1/beta1 resources
 
   cluster_endpoint_public_access = true
 

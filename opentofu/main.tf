@@ -24,7 +24,7 @@ module "eu-west-3" {
     helm          = kubectl.eu-west-3
   }
 
-  cluster_name   = "cluster-1"
+  cluster_name   = "cluster-2"
   vpc_cidr_block = "10.1.0.0/16"
 }
 
@@ -36,6 +36,6 @@ module "eu-west-3" {
 #    aws.us_east_1 = aws.us-east-1
 #  }
 #
-#  cluster_name   = "cluster-1"
+#  cluster_name   = "cluster-3"
 #  vpc_cidr_block = "10.2.0.0/16"
 #}
